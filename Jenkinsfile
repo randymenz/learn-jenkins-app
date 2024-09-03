@@ -1,11 +1,6 @@
 pipeline {
     agent any
-    tools {
-        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' '18.09'
-    }
-    environment {
-        DOCKER_CERT_PATH = credentials('id-for-a-docker-cred')
-    }
+   
 
     stages {
         stage('Build') {
